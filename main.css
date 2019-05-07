@@ -1,12 +1,19 @@
+
+
 h1 {
     color: red;
     text-align: center;
+    height: 200 px;
+    
+    
+    
 }
 
 section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-image: url("/assets/jennifer-grey.jpg");
     
 }
 
@@ -15,6 +22,7 @@ form {
     justify-content: center;
     flex-direction: column;
     padding: 50px;
+    
     
 }
 
