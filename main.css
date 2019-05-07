@@ -1,3 +1,26 @@
 h1 {
     color: red;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    
+}
+
+li {
+    border: black 1px solid;
+    margin-bottom: 20px;
+    height: 50px;
+    
 }
