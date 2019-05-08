@@ -1,19 +1,24 @@
-
-
-h1 {
+header {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
     color: red;
     text-align: center;
-    height: 200 px;
     
-    
-    
+}
+
+.header-logo{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    height: 100px;
 }
 
 section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-image: url("/assets/jennifer-grey.jpg");
+    
     
 }
 
