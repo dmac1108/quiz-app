@@ -1,7 +1,11 @@
 
 
 $(function() {
-  
+$(".js-success").hide();
+$(".js-failure").hide();
+
+let questionNumber = 1;
+let score = 0;
 
 const STORE = [
     {Question: 'Where was Dirty Dancing filmed?',
@@ -20,8 +24,10 @@ const STORE = [
      {
         name: 'Grandview Lodge, Nisswa, MN',
         correct: false
-     },
-     ]}
+     }
+     ],
+     CorrectChoice: true
+    }
 
 ];
 
@@ -59,22 +65,68 @@ function createQuestion(question){
 function createOptions(options){
     console.log("Crete question options function started");
     //console.log(options);
-    const listItems = [];
+    let listItems = "";
     for (let i=0; i<options.length; i++){
         let optionName = options[i].name;
-        //get the list item and add it to the list item array
+        //get the list item and add it to the string
         let listItem = createOptionListItem(optionName);
-        listItems.push(listItem);
-        
+        listItems = listItems.concat(listItem); 
     }
-    console.log(listItems.toString());
-    $(".js-options").append(listItems.toString());
+    $(".js-options").append(listItems);
 }
 
 function createOptionListItem(option){
     console.log("Create the option list item function started");
-    let optionListItem = `<li>${option}<li>`;
+    let optionListItem = `<li class="js-optionitem">${option}</li>`;
     return optionListItem;
+}
+
+$(".js-options").on('click', 'li', function(event){
+    console.log("list option selected");
+    let optionName = $(this).text();
+    checkSelectedOption(optionName);
+    //console.log(optionName);
+});
+
+function checkSelectedOption(selectedOption){
+    console.log(`get selected option function started for ${selectedOption}`);
+    let storeIndex = questionNumber - 1;
+    let correct = true;
+    for (let i=0; i<STORE[storeIndex].Options.length; i++){
+        if(STORE[storeIndex].Options[i].name === selectedOption){
+            correct = STORE[storeIndex].Options[i].correct;
+            STORE[storeIndex].CorrectChoice = correct;
+        }
+    }
+    console.log(STORE[storeIndex].CorrectChoice);
+}
+
+$(".js-submit").click(function(event){
+    event.preventDefault();
+    console.log("Submit button clicked");
+    $(".js-question").empty();
+    $(".js-optionitem").remove();
+    showResult();
+    
+});
+
+function showResult(){
+    console.log("in the append image function");
+    let storeIndex = questionNumber - 1;
+    if(STORE[storeIndex].CorrectChoice){
+        console.log("show success image");
+        $(".js-success").show();
+        score +=1; 
+        $('.js-score').text(score);
+    }
+    else{
+        console.log("show failure image");
+        $(".js-failure").show();
+    }
+}
+
+function updateScore(){
+    console.log("update score function started");
 }
 
 })
