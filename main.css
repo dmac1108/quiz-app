@@ -1,44 +1,132 @@
+body{
+    font-family: sans-serif;
+    color: #d25299;
+    text-shadow: black 0px 1px;
+    background-color: black; 
+    font-size: 18px;
+}
+
+
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: row;
-    color: red;
     text-align: center;
     
 }
 
-.header-logo{
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    height: 100px;
-}
 
-section {
+main {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
+    flex-direction: column;
+}
+
+.headers{
+    display: flex;
+    flex-direction: column;
+}
+.header-logo{
+   
+    height: 100px;
+    margin: 10px;
+}
+
+
+.status-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 18px;
+        flex-shrink: 1;
+}
+
+img {max-width:100%;
+margin: 10px;}
+
+.js-start-page {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 0;
+    flex-basis: 168px;
     
 }
 
-form {
+p {
+    display: block;
+    height: 25px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.questions, .results, .js-end{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 50px;
+    margin-left: auto;
+    margin-right: auto; 
     
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5%;
+    color:  #d25299;
+    border-color: black;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+ul {
+    
+    bottom: 10px;
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 li {
-    border: black 1px solid;
-    margin-bottom: 20px;
-    height: 50px;
+    display: block;
     
+    margin: 10px;
+    height: 25px;
+    padding: 20px;
+    text-align: center;
+    background-color: #d25299;
+    color: black;
 }
 
-.img-size{
-    width: 200px;
-    
+.li-selected {
+    background-color: coral;
+    color:black;
+}
+
+.status-bar {
+    background-color: #d25299;
+    color: black;
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 700px){
+    ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 700px){
+    ul{
+        flex-direction: row;
+    }
+    li{
+        font-size: 14px;
+    }
+    p{
+        font-size: 20px;
+    }
 }

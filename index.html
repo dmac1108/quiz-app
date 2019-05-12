@@ -15,24 +15,41 @@
 <body>
     <header>
 <img class="header-logo" src="./assets/main_movie_image.jpeg" alt="Baby">
-<h1>Dirty Dancing Quiz</h1>
+<div class="headers"><h1>Dirty Dancing Quiz</h1>
+
     </header>
     <main>
-        <section>
+        <section class="status-bar">
+            
             <p>Question <span class="js-num-questions">0</span> of 10</p>
             <p>Score <span class="js-score">0</span></p>
         </section>
-        <section>
+        <section class="js-start-page">
+            <img src="./assets/get_started.jpeg" alt="Johnny wants you to come here and start the quiz">
             <button class="js-start">Start</button>
         </section>
-        <form class="js-form">
+        <section class="results">
+        <div class="js-success results">
+            <p>Correct! Stay just a little bit longer.</p>
+            <img class="result-image"  src="./assets/success2.jpeg" alt="Dirty Dancing Lift Image - You got it right!"> 
+        </div>
+        <div class="js-failure results">
+            <p>Incorrect. I won't tell your Mother about this.</p>    
+            <img class="result-image"  src="./assets/jennifer-grey.jpg" alt="Baby says you got it wrong!">  
+            <p class="js-correct-choice"></p>
+        </div>
+        <button class="js-continue">Click to Continue</button>
+        <div class="js-end"></div>
+        </section>
+        <form>
+            <div class="questions">
             <p class="js-question"></p>
             <ul class="js-options">
-            <img class="js-success img-size" src="./assets/success.jpeg" alt="Dirty Dancing Lift Image - You got it right!"> 
-            <img class="js-failure img-size" src="./assets/jennifer-grey.jpg" alt="Baby says you got it wrong!">   
             </ul>
             <button type="submit" class="js-submit">Submit Answer</button>
+        </div>
         </form>
+        
 
 
     </main>
