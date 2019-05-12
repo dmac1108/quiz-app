@@ -127,7 +127,7 @@ const STORE = [
         correct: false
      },
      {
-        name: 'The House Painters and Plasters Local #179',
+        name: 'The House Painters and Plasterers Local #179',
         correct: true
      }
      ],
@@ -153,7 +153,7 @@ const STORE = [
      ],
      CorrectChoice: false
     },
-    {Question: 'What was Baby\'s Dad doing when she asked form money to give to Penny?',
+    {Question: 'What was Baby\'s Dad doing when she asked for money to give to Penny?',
      Options: [{
         name: 'Practicing Putting',
         correct: true
