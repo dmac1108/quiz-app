@@ -28,18 +28,18 @@ button{
     border-radius: 5%;
     color:  #d25299;
     border-color: black;
-    margin: 20px;
     padding: 10px;
     -webkit-appearance: button;
+    width: 50%;
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: visible;
 
-      font-family: inherit; /* 1 */
-      font-size: 100%; /* 1 */
-      line-height: 1.15; /* 1 */
-      margin: 0; /* 2 */
-    
-      overflow: visible;
-
-      text-transform: none;
+    text-transform: none;
 }
 
 .headers{
@@ -87,6 +87,7 @@ p {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto; 
+    text-align: center;
     
 }
 

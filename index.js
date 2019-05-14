@@ -349,7 +349,7 @@ $(".js-continue").click(function(event){
 
 function endQuiz(){
   if(score>5){
-   $(".js-end").append(`<p class="js-end">Your final score was ${score}. I've had the time of my life</p>
+   $(".js-end").append(`<p class="js-end">Your final score was ${score}. I've had the time of my life.</p>
    <button class="js-restart js-end">Restart Quiz</button>`);
 
   }
