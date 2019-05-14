@@ -23,7 +23,6 @@ main {
 
 
 button{
-    /*font-size: 18px;*/
     font-weight: bold;
     border-radius: 5%;
     color:  #d25299;
@@ -33,13 +32,10 @@ button{
     width: 50%;
     font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
-    /*line-height: 1.15*/; /* 1 */
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    /*overflow: visible;
-
-    text-transform: none;*/
+  
 }
 
 .headers{
@@ -69,9 +65,7 @@ margin: 10px;}
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    flex-grow: 0;
-    /*flex-basis: 168px;*/
-    
+    flex-grow: 0; 
 }
 
 p {
@@ -105,7 +99,6 @@ ul {
 
 li {
     display: block;
-    
     margin: 10px;
     height: 25px;
     padding: 20px;
@@ -125,6 +118,13 @@ li {
     margin: 10px;
 }
 
+.failure-image {
+    height: 240px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 
@@ -133,9 +133,11 @@ li {
         flex-direction: row;
     }
     li{
-        font-size: 14px;
+        font-size: 75%;
+        
     }
     p{
+        
         font-size: 20px;
     }
 }
@@ -143,5 +145,11 @@ li {
 @media screen and (max-width: 700px){
     ul {
         flex-direction: column;
+    }
+
+    li{
+        height: 20px;
+        padding: 5px;
+        font-size: 75%;
     }
 }
